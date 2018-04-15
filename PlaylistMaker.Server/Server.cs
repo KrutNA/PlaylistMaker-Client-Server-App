@@ -6,9 +6,9 @@ using System.Threading;
 
 namespace PlaylistMaker.Server
 {
-    class Server
+    internal class Server
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
 
         }
