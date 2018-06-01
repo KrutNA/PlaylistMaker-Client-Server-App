@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistMaker.Client", "Pla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistMaker.Server", "PlaylistMaker.Server\PlaylistMaker.Server.csproj", "{779FED16-9363-4FAC-9504-C63B9D8708C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistMaker.Logic", "PlaylistMaker.Logic\PlaylistMaker.Logic.csproj", "{33584517-E112-473B-A4B6-89843369FD3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistMaker.Logic", "PlaylistMaker.Logic\PlaylistMaker.Logic.csproj", "{0707788F-9ED6-45FF-AE24-4078B0196BA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{779FED16-9363-4FAC-9504-C63B9D8708C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{779FED16-9363-4FAC-9504-C63B9D8708C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{779FED16-9363-4FAC-9504-C63B9D8708C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33584517-E112-473B-A4B6-89843369FD3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33584517-E112-473B-A4B6-89843369FD3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33584517-E112-473B-A4B6-89843369FD3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33584517-E112-473B-A4B6-89843369FD3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0707788F-9ED6-45FF-AE24-4078B0196BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0707788F-9ED6-45FF-AE24-4078B0196BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0707788F-9ED6-45FF-AE24-4078B0196BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0707788F-9ED6-45FF-AE24-4078B0196BA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
