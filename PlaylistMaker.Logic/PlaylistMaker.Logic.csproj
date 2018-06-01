@@ -57,11 +57,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Addition.cs" />
+    <Compile Include="Commands\ClientCloser.cs" />
+    <Compile Include="Commands\CompositionAdder.cs" />
+    <Compile Include="Commands\CompositionRemover.cs" />
+    <Compile Include="Commands\PMHelpDisplayer.cs" />
     <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\CompositionsListDisplayer.cs" />
+    <Compile Include="Commands\CompositionsListDisplayerFull.cs" />
+    <Compile Include="Commands\PlaylistsListDisplayer.cs" />
+    <Compile Include="Commands\CompositionSearchEngine.cs" />
+    <Compile Include="Deserializer.cs" />
+    <Compile Include="Model\Argument.cs" />
+    <Compile Include="Model\Composition.cs" />
+    <Compile Include="Model\Playlist.cs" />
+    <Compile Include="Model\RequestCommand.cs" />
+    <Compile Include="Stream\Output.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Input.cs" />
+    <Compile Include="Stream\Input.cs" />
     <Compile Include="Request\Creator.cs" />
     <Compile Include="Request\Executer.cs" />
   </ItemGroup>

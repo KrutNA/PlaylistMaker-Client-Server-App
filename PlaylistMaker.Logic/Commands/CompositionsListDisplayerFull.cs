@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlaylistMaker.Logic
+namespace PlaylistMaker.Logic.Commands
 {
-    internal class Program
+    /*
+     internal class CompositionsListDisplayerFull
     {
-        private static void Main(string[] args)
-        {
-        }
+        
     }
+    */
 }

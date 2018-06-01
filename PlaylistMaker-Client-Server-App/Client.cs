@@ -1,7 +1,9 @@
 ﻿using System;
-using System.Net.Http;
 using System.Text;
+using System.Net.Http;
+using System.Threading;
 using PlaylistMaker.Logic.Request;
+using PlaylistMaker.Logic.Stream;
 
 namespace PlaylistMaker.Client
 {
@@ -9,27 +11,36 @@ namespace PlaylistMaker.Client
     {
         private static void Main(string[] args)
         {
+            Console.Title = "Client";
+            Output output = new Output();
             if (args.Length == 2)
             {
-                var creator = new Creator();
-                if (!creator.Execute())
-                    return;
-                var client = new HttpClient();
-
-                var content =
-                    new ByteArrayContent(Encoding.UTF8.GetBytes(creator.GetResult()));
-                try
+                while (true)
                 {
-                    client.PostAsync($"http://{args[0]}:{args[1]}", content);
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine($"Can't connect to the server.\n{e}");
+                    var creator = new Creator();
+                    if (!creator.Execute())
+                        return;
+                    var client = new HttpClient();
+                    var content =
+                        new ByteArrayContent(Encoding.UTF8.GetBytes(creator.GetResult()));
+                    //try
+                    //{
+                    var response = client.PostAsync($"http://{args[0]}:{args[1]}/", content);
+                    var message = response.Result.Content.ReadAsStringAsync();
+                    creator.DisplayResponse(message.Result);
+                    /*
+                    }
+                    catch(Exception e)
+                    {
+                        output.Execute($"Can't connect to the server.\n{e}");
+                        Console.ReadKey();
+                        return;
+                    }*/
                 }
             }
             else
             {
-                Console.WriteLine(
+                output.Execute(
                     "Program need only 2 arguments:\n\t1) IP addres of Server\n\t2) Port for connection\nPress any key to exit");
                 Console.ReadKey();
             }

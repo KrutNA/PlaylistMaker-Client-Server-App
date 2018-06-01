@@ -1,9 +1,17 @@
 ﻿namespace PlaylistMaker.Logic.Commands
 {
-    interface ICommand
+    internal interface ICommand
     {
+        string ReadArgs();
+
+        void Execute(string request, out string result);
+
+        void Display(string result);
+
         string GetName();
-        
-        void Execute(string path);
+
+        int GetArgsCount();
+
+        bool IsDisplayable();
     }
 }
