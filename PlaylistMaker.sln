@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistMaker.Client", "PlaylistMaker-Client-Server-App\PlaylistMaker.Client.csproj", "{5CBF894D-BD23-4602-B5AD-28E2F19E166C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistMaker.Server", "PlaylistMaker.Server\PlaylistMaker.Server.csproj", "{779FED16-9363-4FAC-9504-C63B9D8708C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistMaker.Logic", "PlaylistMaker.Logic\PlaylistMaker.Logic.csproj", "{0707788F-9ED6-45FF-AE24-4078B0196BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaylistMaker.Client", "PlaylistMaker.Client\PlaylistMaker.Client.csproj", "{5CBF894D-BD23-4602-B5AD-28E2F19E166C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5CBF894D-BD23-4602-B5AD-28E2F19E166C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CBF894D-BD23-4602-B5AD-28E2F19E166C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CBF894D-BD23-4602-B5AD-28E2F19E166C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CBF894D-BD23-4602-B5AD-28E2F19E166C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{779FED16-9363-4FAC-9504-C63B9D8708C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{779FED16-9363-4FAC-9504-C63B9D8708C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{779FED16-9363-4FAC-9504-C63B9D8708C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{0707788F-9ED6-45FF-AE24-4078B0196BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0707788F-9ED6-45FF-AE24-4078B0196BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0707788F-9ED6-45FF-AE24-4078B0196BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CBF894D-BD23-4602-B5AD-28E2F19E166C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBF894D-BD23-4602-B5AD-28E2F19E166C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBF894D-BD23-4602-B5AD-28E2F19E166C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBF894D-BD23-4602-B5AD-28E2F19E166C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
