@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Text;
 using System.Net.Http;
-using System.Threading;
 using PlaylistMaker.Logic.Request;
 using PlaylistMaker.Logic.Stream;
 
@@ -20,7 +19,10 @@ namespace PlaylistMaker.Client
                 {
                     var creator = new Creator();
                     if (!creator.Execute())
-                        return;
+                    {
+                        output.Execute("Unknown command\n");
+                        continue;
+                    }
                     var client = new HttpClient();
                     var content =
                         new ByteArrayContent(Encoding.UTF8.GetBytes(creator.GetResult()));
