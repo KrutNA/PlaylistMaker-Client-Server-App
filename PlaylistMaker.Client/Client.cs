@@ -12,7 +12,8 @@ namespace PlaylistMaker.Client
         private static void Main(string[] args)
         {
             Console.Title = "Client";
-            Output output = new Output();
+            var output = new Output();
+            var input = new Input();
             if (args.Length == 2)
             {
                 while (true)
@@ -23,26 +24,25 @@ namespace PlaylistMaker.Client
                     var client = new HttpClient();
                     var content =
                         new ByteArrayContent(Encoding.UTF8.GetBytes(creator.GetResult()));
-                    //try
-                    //{
+                    try
+                    {
                     var response = client.PostAsync($"http://{args[0]}:{args[1]}/", content);
                     var message = response.Result.Content.ReadAsStringAsync();
                     creator.DisplayResponse(message.Result);
-                    /*
                     }
                     catch(Exception e)
                     {
                         output.Execute($"Can't connect to the server.\n{e}");
-                        Console.ReadKey();
+                        input.ReadKey();
                         return;
-                    }*/
+                    }
                 }
             }
             else
             {
                 output.Execute(
                     "Program need only 2 arguments:\n\t1) IP addres of Server\n\t2) Port for connection\nPress any key to exit");
-                Console.ReadKey();
+                input.ReadKey();
             }
         }
     }

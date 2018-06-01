@@ -19,6 +19,11 @@ namespace PlaylistMaker.Logic.Stream
             return this.Execute();
         }
 
+        public ConsoleKeyInfo ReadKey()
+        {
+            return Console.ReadKey();
+        }
+
         public void ConsoleReading()
         {
             do

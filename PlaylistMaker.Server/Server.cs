@@ -22,12 +22,23 @@ namespace PlaylistMaker.Server
         private static void Main(string[] args)
         {
             Console.Title = "Server";
+            var output = new Output();
+            var input = new Input();
             listener = new HttpListener();
             listener.Prefixes.Add("http://localhost:10666/");
-            Console.WriteLine("input \"stop\" to close app");
+            output.Execute("input \"stop\" to close app\n");
             var check = new Thread(CheckInput);
             check.Start();
-            listener.Start();
+            try
+            {
+                listener.Start();
+            }
+            catch (Exception e)
+            {
+                output.Execute($"{e}");
+                input.ReadKey();
+                return;
+            }
             do
             {
                 var context = listener.GetContext();
@@ -37,9 +48,9 @@ namespace PlaylistMaker.Server
                 var buffer = Encoding.UTF8.GetBytes(executer.GetResult());
                 var response = context.Response;
                 response.ContentLength64 = buffer.Length;
-                using (var output = response.OutputStream)
+                using (var newOutput = response.OutputStream)
                 {
-                    output.Write(buffer, 0, buffer.Length);
+                    newOutput.Write(buffer, 0, buffer.Length);
                 }
 
             } while (true);
